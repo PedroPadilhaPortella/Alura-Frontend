@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #bbb;
+    padding: 20px 0;
+}
+
+.header-content {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin-left: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #c78c19;
+}
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.produtos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    border: #000 solid 2px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.produtos li:hover {
+    border: #c78c19 solid 2px;
+} 
+
+.produtos li:active {
+    border: green solid 4px;
+} 
+
+.produtos li:hover h2 {
+    font-size: 34px;
+} 
+
+.descricao {
+    font-size: 18px;
+}
+
+.preco {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+footer {
+    background: url('../images//bg.png');
+    text-align: center;
+    color: #fff;
+    font: 'Times New Roman';
+    font-size: 20px;
+    padding: 40px 0;
+}
+
+.copyright {
+    padding-top: 20px;
+}
