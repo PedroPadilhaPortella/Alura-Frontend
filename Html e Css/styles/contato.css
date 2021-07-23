@@ -1,0 +1,81 @@
+main {
+    width: 940px;
+    margin: 0 auto;
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label,
+form input {
+    display: block;
+}
+
+form label,
+form legend {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.input-default {
+    margin-top: 10px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+.radiobox label,
+.checkbox {
+    display: flex;
+}
+
+.radiobox input,
+.checkbox input {
+    margin-right: 10px;
+}
+
+input.send {
+    width: 30%;
+    padding: 15px 0;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+input.send:hover {
+    background-color: orangered;
+    transform: scale(1.1);
+}
+
+tfoot {
+    display: flex;
+}
+
+tfoot tr td {
+    flex-wrap: wrap;
+}
+
+table {
+    margin: 20px 0 40px 0;
+}
+
+thead {
+    background-color: #555;
+    color: white;
+    font-weight: bold;
+}
+
+td,
+th {
+    border: 1px #000 solid;
+    padding: 8px 15px;
+}
+

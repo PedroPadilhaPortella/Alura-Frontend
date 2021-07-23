@@ -1,0 +1,12 @@
+footer {
+    background: url('../images//bg.png');
+    text-align: center;
+    color: #fff;
+    font: 'Times New Roman';
+    font-size: 20px;
+    padding: 40px 0;
+}
+
+.copyright {
+    padding-top: 20px;
+}

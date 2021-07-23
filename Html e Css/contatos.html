@@ -4,9 +4,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/contato.css">
     <title>Contatos - Barbearia Alura</title>
 </head>
 <body>
+    <header>
+        <div class="header-content">
+            <h1><img src="./images/logo.png" alt="logo"></h1>
+            <nav>
+                <ul class="navegacao">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contatos.html">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     
+    <main>
+        <form >
+            <fieldset>
+                <label for="name">Nome e Sobrenome</label>
+                <input class="input-default" type="text" id="name" name="name" placeholder="Seu Nome Completo . . ." required>
+                
+                <label for="email">Email</label>
+                <input class="input-default" type="email" id="email" name="email" placeholder="Seu Email . . ." required>
+                
+                <label for="phone">Telefone</label>
+                <input class="input-default" type="tel" id="phone" name="phone" placeholder="Seu Telefone . . ." required>
+                
+                <label for="message">Mensagem</label>
+                <textarea class="input-default" name="message" id="message" cols="30" rows="10" required></textarea>
+            </fieldset>
+            
+            <fieldset class="radiobox">
+                <legend>Como prefere o nosso Contato?</legend>
+                <label>
+                    <input type="radio" name="contact" id="WhatsApp" value="WhatsApp">WhatsApp
+                </label>
+                <label>
+                    <input type="radio" name="contact" id="Email" value="Email" checked>Email
+                </label>
+                <label>
+                    <input type="radio" name="contact" id="Telegram" value="Telegram">Telegram
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Em qual horário prefere ser atendido</legend>
+                <select name="horario" id="horario" required>
+                    <option value="manha">Manhã</option>
+                    <option value="tarde">Tarde</option>
+                    <option value="noite">Noite</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <label class="checkbox">
+                    <input type="checkbox" name="novidades" id="novidades" checked>Gostaria de Receber nossa novidades por Email
+                </label>
+            </fieldset>            
+
+            <input type="submit" value="Enviar Formulário" class="send">
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Dia</th>
+                    <th>Horário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Segundas</td>
+                    <td>8:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td>Quartas</td>
+                    <td>8:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td>Sextas</td>
+                    <td>8:00 - 18:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <img src="./images/logo-branco.png" alt="logo">
+        <p class="copyright">&copy; Pedro Portella Alura - 2021</p>
+    </footer>
 </body>
 </html>
