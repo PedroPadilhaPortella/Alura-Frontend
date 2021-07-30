@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Home - Barbearia Alura</title>
 </head>
 
@@ -25,30 +26,59 @@
         </div>
     </header>
 
-    <div class="container">
-        <img class="banner" src="./images/banner.jpg" alt="banner">
-        <div class="main">
+    <img class="banner" src="./images/banner.jpg" alt="banner">
+    <main>
+        <section class="about">
             <h2>Sobre a Barbearia Alura</h2>
-            <p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia.</p>
+
+            <img class="utensilios" src="./images/utensilios.jpg" alt="Utensílios">
+
+            <p>
+                Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o
+                que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é 
+                destaque na cidade e conquista novos clientes a cada dia.</p>
             <p class="message">
                 <em>Nossa missão é: 
                     <strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong>
                 .</em>
             </p>
-            <p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
-        </div>
+            <p>
+                Oferecemos profissionais experientes e antenados às mudanças no mundo da moda.
+                O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação
+                dos nossos clientes.
+            </p>
+        </section>
+
+        <section class="map">
+            <h2>Nosso Estabelecimento</h2>
+            <p>Nosso Estabelecimento está localizado no coração da Cidade</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.448598130913!2d-46.63465338562865!3d-23.588239368469154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum%20-%20Escola%20de%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1627281848944!5m2!1spt-BR!2sbr" 
+            width="100%" height="450" allowfullscreen="" loading="lazy"></iframe>
+        </section>
             
-        <div class="beneficios">
+        <section class="beneficios">
             <h2>Benefícios</h2>
-            <ul class="beneficios-list">
-                <li>Atendimento ao Cliente</li>
-                <li>Espaço Diferenciado</li>
-                <li>Localização</li>
-                <li>Profissionais Qualificados</li>
-            </ul>
-            <img class="beneficios-banner" src="./images/beneficios.jpg" alt="">
-        </div>
-    </div>
+            <div class="conteudo">
+                <ul class="beneficios-list">
+                    <li>Atendimento ao Cliente</li>
+                    <li>Espaço Diferenciado</li>
+                    <li>Localização</li>
+                    <li>Profissionais Qualificados</li>
+                    <li>Pontualidade</li>
+                    <li>Limpeza</li>
+                </ul>
+                <img class="beneficios-banner" src="./images/beneficios.jpg" alt="">
+            </div>
+        </section>
+
+        <section class="video">
+            <iframe 
+                width="560" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" 
+                title="YouTube video player" frameborder="0" allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+            </iframe>
+        </section>
+    </main>
 
     <footer>
         <img src="./images/logo-branco.png" alt="logo">

@@ -37,3 +37,16 @@
     font-weight: bold;
     font-size: 22px;
 }
+
+@media screen and (max-width: 1000px) {
+    .produtos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    
+}

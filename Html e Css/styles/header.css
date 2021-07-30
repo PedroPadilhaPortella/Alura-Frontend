@@ -1,6 +1,12 @@
+@font-face {
+    font-family: 'Montserrat';
+    src:  url('../fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 fieldset {
@@ -43,3 +49,20 @@ nav a {
 nav a:hover {
     color: #c78c19;
 }
+
+@media screen and (max-width: 1000px) {
+    .header-content {
+      width: 100%;
+    }
+  }
+
+@media screen and (max-width: 650px) {
+    .header-content {
+        text-align: center;
+    }
+    .header-content h1,
+    .header-content nav {
+        display: inline;
+        position: initial;
+    }
+  }

@@ -1,5 +1,12 @@
-.container {
+body {
+  background: linear-gradient(white, rgb(36, 34, 34));
+  /* background-color: red; */
+}
+
+main {
   text-align: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .banner {
@@ -7,9 +14,14 @@
   height: 25rem;
 }
 
-.main {
-  background: rgb(247, 245, 245);
-  padding: 20px 100px;
+section.about {
+  padding: 20px 0;
+}
+
+section img {
+  width: 120px;
+  float: left;
+  margin: 0 auto;
 }
 
 .message {
@@ -17,31 +29,125 @@
 }
 
 em strong {
-  color: red;
+  color: rgba(228, 47, 47, 0.788);
 }
 
-.beneficios {
-  background: #fff;
-  padding: 10px 100px;
-  display: inline-block;
+iframe {
+  margin: 2rem auto;
+  border: 0;
 }
 
 h2 {
   margin: 1rem;
+  text-shadow: 1px 1px rgb(82, 88, 114);
+}
+
+section.beneficios {
+  display: inline-block;
+  clear: both;
+}
+
+.conteudo {
+  width: 700px;
+  margin: 0 auto;
 }
 
 .beneficios-list {
   display: inline-block;
-  vertical-align: top;
-  width: 25%;
-  margin-right: 10%;
+  vertical-align: middle;
+  text-align: start;
+  width: 50%;
+  list-style: none;
+}
+
+.beneficios-list li:nth-child(1) {
+  font-weight: bold;
 }
 
 .beneficios-list li {
   font-style: italic;
   font-size: 1.3rem;
+  line-height: 1.7rem;
+}
+
+.beneficios-list li:before {
+  content: "☆ ";
 }
 
 .beneficios-banner {
   width: 40%;
+  box-shadow: 10px 10px 5px 2px #555;
+  transition: 300ms;
+}
+
+.beneficios-banner:hover {
+  opacity: 0.5;
+}
+
+/*
+Seletores CSS
+
+div p {} //todos os descendentes
+
+div > p {} //somente os filhos diretos
+
+h2 + p {} //primeiro irmão direto
+
+h2 ~ p {} //todos os irmãos diretos
+
+div p:not(.estilo) {} //todos exceto os que tem a classe 'estilo'
+
+div p:not(#excluido) {} //todos exceto os que tem o id 'excluido'
+
+
+Calculo de CSS
+div {
+    width: calc(50% - 24px);
+*/
+
+@media screen and (max-width: 1000px) {
+  .header-content {
+    width: 100%;
+  }
+  .conteudo {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .banner {
+    height: 50%;
+  }
+
+  img.utensilios {
+    display: none;
+  }
+
+  iframe {
+    width: 100%;
+    height: 315px;
+  }
+
+  .beneficios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .beneficios-list {
+    display: inline;
+    text-align: center;
+    width: 100%;
+  }
+
+  .beneficios-banner {
+    width: 100%;
+    padding: 0 auto;
+    padding-top: 2rem;
+    box-shadow: none;
+  }
+
+  .conteudo {
+    display: inline;
+  }
 }
