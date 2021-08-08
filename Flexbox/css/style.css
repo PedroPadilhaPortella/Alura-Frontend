@@ -8,12 +8,6 @@ body {
 	margin: 0 auto;
 }
 
-.cabecalhoPrincipal .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .cabecalhoPrincipal {
 	background-color: #FFF;
 	padding: 20px 0;
@@ -28,10 +22,6 @@ body {
 .cabecalhoPrincipal-titulo a {
 	text-decoration: none;
 	color: inherit;
-}
-
-.cabecalhoPrincipal-nav {
-    display: flex;
 }
 
 .cabecalhoPrincipal-nav-link {
@@ -56,12 +46,6 @@ body {
 	font-size: 32px;
 	margin-bottom: 10px;
 	text-align: center;
-}
-
-.conteudoPrincipal-cursos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
 }
 
 .conteudoPrincipal-cursos-link {
@@ -124,14 +108,6 @@ body {
 	color: #FFF;
 }
 
-.rodapePrincipal-navMap-list {
-    display: flex;
-    /* flex-direction: column; */
-    /* flex-wrap: wrap; */
-    flex-flow: column wrap;
-    height: 250px;
-}
-
 .rodapePrincipal-navMap-link {
 	text-decoration: none;
 	color: #FFF;
@@ -160,19 +136,6 @@ body {
 .navmap-list-title-frontend { color: #5EC6F3; border-left: 4px solid #5EC6F3; }
 .navmap-list-title-backend { color: #25D285; border-left: 4px solid #25D285; }
 
-.rodapePrincipal-patrocinadores .container {
-    display: flex;
-    justify-content: space-between;
-}
-
-ul.rodapePrincipal-patrocinadores-list {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 70%;
-    margin-right: 5%;
-}
-
 .rodapePrincipal-patrocinadores {
 	margin-top: 30px;
 	background: #F2F5F7;
@@ -183,10 +146,6 @@ ul.rodapePrincipal-patrocinadores-list {
 	margin-top: 20px;
 	text-align: center;
     width: 25%;
-}
-
-.rodapePrincipal-contatoForm-fieldset {
-    display: flex;
 }
 
 .rodapePrincipal-contatoForm label[for=email-contato] {
