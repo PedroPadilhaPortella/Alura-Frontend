@@ -1,5 +1,4 @@
 const campoCep = document.querySelector('#cep');
-console.log(campoCep);
 
 campoCep.oninvalid = function() {
     this.setCustomValidity('');
