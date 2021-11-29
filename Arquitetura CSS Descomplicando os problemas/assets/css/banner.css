@@ -2,9 +2,10 @@
     position: relative;
 }
 
-.baner__imagem {
-    height: calc(100vh - 72px);
+.banner__imagem {
+    height: calc(90vh - 72px);
     width: 100%;
+    background: url('../../assets/img/banner.jpg') no-repeat center / cover;
 }
 
 .banner__titulo {
