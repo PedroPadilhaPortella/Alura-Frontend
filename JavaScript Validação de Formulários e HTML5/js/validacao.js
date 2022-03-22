@@ -1,6 +1,11 @@
+import { validadeCPF } from './cpfValidator.js';
+import { validadeBirthDate } from './dataValidator.js';
+import { validadeCEP } from './cepValidator.js';
+
 const validators = {
     nascimento: input => validadeBirthDate(input),
     cpf: input => validadeCPF(input),
+    cep: input => validadeCEP(input),
 }
 
 const errorTypes = ['valueMissing', 'typeMismatch', 'patternMismatch', 'customError'];
@@ -23,11 +28,13 @@ const errorMessages = {
     },
     cpf: {
         valueMissing: 'O campo CPF não pode estar vazio',
-        patternMismatch: 'CPF Inválido',
+        patternMismatch: 'O campo CPF está inválido',
         customError: 'CPF Inválido'
     },
     cep: {
         valueMissing: 'O campo CEP não pode estar vazio',
+        patternMismatch: 'O campo CEP está inválido',
+        customError: 'Não foi possível encotrar esse Endereço'
     },
     logradouro: {
         valueMissing: 'O campo logradouro não pode estar vazio',
@@ -40,6 +47,10 @@ const errorMessages = {
     },
 }
 
+/**
+ * 
+ * @param {EventTarget} input 
+ */
 export function validate(input) {
     const type = input.dataset.tipo;
     
@@ -56,60 +67,16 @@ export function validate(input) {
     }
 }
 
-
-function validadeBirthDate(input) {
-    const birthDate = new Date(input.value);
-    input.setCustomValidity(isOlderThan18(birthDate) ? '' : 'Você precisa ser maior que 18 anos para se cadastrar');
-}
-
-
-function validadeCPF(input) {
-    const cpf = input.value.replace(/\D/g, '');
-    input.setCustomValidity(isRepeatedCPF(cpf)? 'O cpf digitado não é válido' : '');
-}
-
-
-function isOlderThan18(birthDate) {
-    const ano = new Date(birthDate.getUTCFullYear() + 18, birthDate.getUTCMonth(), birthDate.getUTCDate());
-    const dateNow = new Date();
-    return ano <= dateNow;
-}
-
-
-function isRepeatedCPF(cpf) {
-    const repeatedCPFs = [
-        '00000000000',
-        '11111111111',
-        '22222222222',
-        '33333333333',
-        '44444444444',
-        '55555555555',
-        '66666666666',
-        '77777777777',
-        '88888888888',
-        '99999999999',
-    ];
-
-    var invalidCPF = false;
-
-    repeatedCPFs.forEach(value => {
-        console.log(value)
-        if(value == cpf) {
-            invalidCPF = true;
-        }
-    });
-
-    return invalidCPF;
-}
-
+/**
+ * 
+ * @param {string} inputType 
+ * @param {EventTarget} input 
+ * @returns 
+ */
 function showErrorMessage(inputType, input) {
     let message = '';
-
     errorTypes.forEach(errorType => {
-        if(input.validity[errorType]) {
-            message = errorMessages[inputType][errorType];
-        }
-    })
-
+        if(input.validity[errorType]) message = errorMessages[inputType][errorType];
+    });
     return message;
 }
