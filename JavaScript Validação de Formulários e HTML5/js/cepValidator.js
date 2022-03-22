@@ -8,28 +8,27 @@ export function validadeCEP(input) {
     const options = { 
         method: 'get', 
         mode: 'cors', 
-        headers: { 
-            'content-type': 'application/json;charset=utf8'
-        }
+        headers: {  'content-type': 'application/json;charset=utf8' }
     };
 
     if(!input.validity.patternMismatch && !input.validity.valueMissing) {
         fetch(url, options)
             .then(response => response.json())
             .then(data => {
-                console.log(data)
-                if(data.erro == true) {
+                if(data.erro)
                     return input.setCustomValidity('Não foi possível encotrar esse Endereço');
-                }
 
                 input.setCustomValidity('');
                 return fillFieldsWithCEP(data);
-            })
+            });
     }
-
 }
 
 
+/**
+ * Função que mapeia os dados requeridos da requisição para os campos do formulário de CEP
+ * @param {json} data Dados retornados pela API
+ */
 function fillFieldsWithCEP(data) {
     const logradouro = document.querySelector('[data-tipo="logradouro"]');
     const cidade = document.querySelector('[data-tipo="cidade"]');
