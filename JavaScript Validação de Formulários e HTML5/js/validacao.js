@@ -1,5 +1,5 @@
 import { validadeCPF } from './cpfValidator.js';
-import { validadeBirthDate } from './dataValidator.js';
+import { validadeBirthDate } from './birhtDateValidator';
 import { validadeCEP } from './cepValidator.js';
 
 const validators = {
